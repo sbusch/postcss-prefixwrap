@@ -6,7 +6,7 @@ var postcss = require("postcss");
 
   function PostCSSPrefixWrap(prefixSelector, options) {
     this.anyWhitespaceAtBeginningOrEnd = /(^\s*|\s*$)/g;
-    this.isPrefixSelector = new RegExp("^\s*" + prefixSelector + ".*$");
+    this.isPrefixSelector = new RegExp("^\s*" + prefixSelector + ".*$"); // eslint-disable-line no-useless-escape
     this.isRootTag = /^(body|html).*$/;
     this.prefixRootTags = options !== undefined && options.hasOwnProperty("prefixRootTags") ? options.prefixRootTags : false;
     this.prefixSelector = prefixSelector;

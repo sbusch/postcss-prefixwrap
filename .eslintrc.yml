@@ -3,7 +3,7 @@
 #
 
 extends:
-  - "defaults"
+  - "eslint:recommended"
 
 parserOptions:
   ecmaVersion: 5
